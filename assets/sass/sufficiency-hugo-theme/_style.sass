@@ -28,6 +28,30 @@
                                 opacity: 1
                                 animation: blink 0.5s infinite alternate
 
+header#document-header
+    .top-menu
+        border-bottom: 1px solid $color-border
+        padding: 0
+        text-align: center
+        ul
+            display: flex
+            justify-content: center
+            list-style: none
+            margin: 0
+            padding: 0
+            li
+                padding: 0 $spacing-3
+                span, a
+                    @include small
+                    display: block
+                    padding: $spacing-2 0 $spacing-1
+                span
+                    border-bottom: 5px solid black
+                a
+                    text-decoration: none
+                    &::after
+                        content: ""
+
 footer#document-footer
     .footer-legals
         .footer-credit
