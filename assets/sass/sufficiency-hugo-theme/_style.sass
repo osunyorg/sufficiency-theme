@@ -43,10 +43,24 @@ header#document-header
                         @include small
 
 footer#document-footer
-    .footer-legals
-        .footer-credit
-            div
-                margin-top: pxToRem(12)
+    @include media-breakpoint-up(desktop)
+        padding-top: 0
+        display: flex
+        flex-direction: row-reverse
+        align-items: flex-end
+    .container
+        justify-content: flex-end
+        padding-bottom: 0
+    .footer-site
+    @include media-breakpoint-up(desktop)
+        .container:first-of-type
+        .footer-legals
+            .footer-credit,
+            .nav-legal li,
+            .nav-legal
+                display: inline-block
+            .nav-legal li
+                margin-right: $spacing-3
 
 .blocks
     .block-title
