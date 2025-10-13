@@ -1,7 +1,5 @@
 theme: osuny
-paginate: 18
-enableRobotsTXT: true
-removePathAccents: true
+_merge: deep
 params:
   plausible: thesufficiencylab.org
   summary:
@@ -19,7 +17,6 @@ params:
       level_2:
         title:
           active: true
-
   posts:
     index:
       layout: grid
