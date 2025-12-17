@@ -44,23 +44,43 @@ header#document-header
 
 footer#document-footer
     @include media-breakpoint-up(desktop)
-        padding-top: 0
+        align-items: flex-end
         display: flex
         flex-direction: row-reverse
-        align-items: flex-end
-    .container
-        justify-content: flex-end
-        padding-bottom: 0
-    .footer-site
-    @include media-breakpoint-up(desktop)
-        .container:first-of-type
+        justify-content: space-between
+        padding-top: 0
+        .container
+            margin-left: 0
+            margin-right: 0
+        .container:nth-of-type(1)
+            width: columns(3)
+        .container:nth-of-type(2)
+            align-items: start
+            flex-direction: column-reverse
+            width: columns(9)
         .footer-legals
+            margin-top: $spacing-4
             .footer-credit,
             .nav-legal li,
             .nav-legal
                 display: inline-block
             .nav-legal li
                 margin-right: $spacing-3
+        .footer-social
+            ul.site-links
+                margin-bottom: 0
+                li
+                    display: inline-block
+                    margin-right: $spacing-3
+                    &::after
+                        margin-left: pxToRem(2)
+    .container
+        justify-content: flex-end
+        padding-bottom: 0
+
+.button, .btn
+    &:hover, &:focus, &:focus-visible
+        background: $color-background-alt
 
 .blocks
     .block-title
